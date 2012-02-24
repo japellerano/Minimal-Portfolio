@@ -8,10 +8,20 @@ body
    width: 1280px;
    margin: auto;
    margin-top: 30px;
-   border-top: 10px solid rgba(255, 136, 68, 1.0);
    background-color: rgba(255, 255, 255, 1.0);
    position: relative;
    box-shadow: 3px 3px 5px #888;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+}
+
+.accent-border
+{
+   height: 10px;
+   background: rgba(255, 136, 68, 1.0);
+   box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.4);
+   z-index: 10;
+   position: relative;
 }
 
 /* Header -------------------------------------------------- */
@@ -54,6 +64,8 @@ nav
 {
    float: right;
    padding-right: 10px;
+   z-index: 1;
+   position: relative;
 }
 
 ul.menu
@@ -65,14 +77,38 @@ ul.menu
 ul.menu li
 {
    display: inline;
-   margin-right: 8px;
-   width: 70px;
-   height: 35px;
+   margin-right: 10px;
+   height: 30px;
+   width: 60px;
    float: left;
    color: rgba(255, 255, 255, 1.0);
-   text-align: center;
-   overflow: hidden;
    background-color: rgba(255, 136, 68, 1.0);
+   font-size: 16px;
+   font-family: Helvetica, Verdana, sans-serif;
+   text-align: center;
+   line-height: 2;
+   padding-left: 2px;
+   padding-right: 2px;
+   overflow: hidden;
+}
+
+ul.menu li.current-menu-item
+{
+   background-color: rgba(255, 102, 68, 1.0);
+}
+
+ul.menu li:hover
+{
+   height: 60px;
+   transition: height 0.2s linear;
+   -webkit-transition: height 0.2s linear;
+   -moz-transition: height 0.2s linear;
+   -o-transition: height 0.2s linear;
+}
+
+ul.menu li.current-menu-item:hover
+{
+   height: 30px;
 }
 
 ul.menu li a
@@ -81,9 +117,30 @@ ul.menu li a
    text-decoration: none;
 }
 
+/* Main Content -------------------------------------------- */
+
 
 /* Footer -------------------------------------------------- */
 footer
 {
    clear: both;
+   padding-bottom: 30px;
+   padding-top: 30px;
+   margin: auto;
+   text-align: center;
+   width: 100%;
+   border-top: 1px solid rgba(136, 136, 136, 0.8);
+}
+
+footer p
+{
+   font-size: 12px;
+   font-family: Georgia, serif;
+   color: rgba(136, 136, 136, 0.8);
+}
+
+footer p a
+{
+   color: rgba(136, 136, 136, 0.8);
+   text-decoration: none;
 }

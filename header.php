@@ -17,11 +17,10 @@
       </title>
       
       <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-      <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/animated-menu.js"></script>
    </head>
    <body>
       <div id="wrapper">
+         <div class="accent-border"></div>
          <header>
             <h1 id="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
             
