@@ -12,4 +12,7 @@ add_theme_support('post-thumbnails');
 
 // Custom Post Type and Taxonomy for Projects
 require_once(TEMPLATEPATH . '/functions/project.php');
+
+// Custom Admin Options
+require_once(TEMPLATEPATH . '/functions/custom_admin.php');
 ?>
