@@ -1,3 +1,4 @@
+/* Base Styles For General Tags ---------------------------- */
 body
 {
    background-color: #F7F7F7;
@@ -15,6 +16,19 @@ body
    border-bottom-right-radius: 12px;
 }
 
+.heading
+{
+   font-family: Georgia, serif;
+   padding-bottom: 20px;
+}
+
+h2.heading
+{
+   font-size: 30px;
+}
+
+
+/* Header -------------------------------------------------- */
 .accent-border
 {
    height: 10px;
@@ -24,7 +38,6 @@ body
    position: relative;
 }
 
-/* Header -------------------------------------------------- */
 header
 {
    width: 100%;
@@ -120,7 +133,7 @@ ul.menu li a
 }
 
 /* Main Content -------------------------------------------- */
-#content
+#home-content
 {
    width: 80%;
    margin: auto;
@@ -130,13 +143,6 @@ ul.menu li a
    position: relative;
 }
 
-h2#recent
-{
-   font-size: 30px;
-   padding-bottom: 20px;
-   font-family: Georgia, serif;
-}
-
 article.project
 {
    padding-left: 10px;
@@ -144,7 +150,7 @@ article.project
    padding-top: 15px;
    padding-bottom: 15px;
    width: 300px;
-   height: 275px;
+   height: 300px;
    margin-right: 15px;
    margin-bottom: 20px;
    background: rgba(136, 136, 136, 0.2);
@@ -174,7 +180,6 @@ h3.project-title
    padding-top: 4px;
    padding-right: 10px;
    padding-left: 10px;
-   width: 75%;
    margin: auto;
    color: rgba(0, 136, 204, 1.0);
 }
@@ -182,6 +187,32 @@ h3.project-title
 h3.project-title:hover
 {
    color: rgba(255, 255, 255, 0.4);
+}
+
+h5.project-category
+{
+   font-size: 12px;
+   position: absolute;
+   top: 375px;
+}
+
+h5.project-category a
+{
+   color: rgba(1, 1, 1, 0.4);
+}
+
+h5.project-category a:hover
+{
+   color: rgba(1, 1, 1, 0.8);
+}
+
+/* Artists Statement --------------------------------------- */
+#artist-statement
+{
+   width: 75%;
+   margin: auto;
+   text-align: center;
+   padding-top: 10px;
 }
 
 /* Footer -------------------------------------------------- */
