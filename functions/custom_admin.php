@@ -20,7 +20,7 @@ function theme_settings_page() {
       <h2>Custom Theme Options</h2>
       
       <form method="post" action="options.php">
-         <?php settings_field('theme-settings-group'); ?>
+         <?php settings_fields('theme-settings-group'); ?>
          <table class="form-table">
             <tr>
                <th scope="row">Google Analytics Tracking Code</th>
@@ -42,7 +42,7 @@ function theme_settings_page() {
             </tr>
             <th scope="row">Artist Statement</th>
             <td>
-               <textarea name="artist_statement" value="<?php echo get_option('artist_statement'); ?>" />
+               <textarea name="artist_statement" value="<?php echo get_option('artist_statement'); ?>" cols="80" rows="10"></textarea>
             </td>
          </table>
          <p class="submit">
@@ -54,4 +54,8 @@ function theme_settings_page() {
 }
 
 
+/* 
+ * Usage
+ * <?php echo get_option('ga_tracking_code'); ?>
+*/
 ?>
