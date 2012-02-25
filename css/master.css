@@ -215,6 +215,11 @@ h5.project-category a:hover
    padding-top: 10px;
 }
 
+p#statement
+{
+   font-size: 22px;
+}
+
 /* Footer -------------------------------------------------- */
 footer
 {

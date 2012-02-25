@@ -3,7 +3,7 @@
 
    <div id="artist-statement">
       <h2 class="heading">Artist's Statement</h2>
-      <?php ?>
+      <p id="statement"><?php echo get_option('artist_statement'); ?></p>
    </div>
    <div class="clear"></div>
    <div id="home-content">
