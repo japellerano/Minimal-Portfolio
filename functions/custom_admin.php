@@ -20,7 +20,7 @@ function theme_settings_page() {
       <h2>Custom Theme Options</h2>
       
       <form method="post" action="options.php">
-         <?php settings_field('theme-settings-grou'); ?>
+         <?php settings_field('theme-settings-group'); ?>
          <table class="form-table">
             <tr>
                <th scope="row">Google Analytics Tracking Code</th>
@@ -50,7 +50,7 @@ function theme_settings_page() {
          </p>
       </form>
    </div>
-   ?>
+   <?php
 }
 
 
