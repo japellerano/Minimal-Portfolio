@@ -63,5 +63,58 @@ function register_project_post() {
    );
 }
 
+// URL Meta Box
+add_action('admin_init', 'portfolio_meta_init');
+
+function portfolio_meta_init()
+{
+   add_meta_box('portfolio_meta', 'Project Website', 'portfolio_meta_setup', 'project', 'side', 'low');
+   add_action('save_post', 'portfolio_meta_save');
+}
+
+function portfolio_meta_setup()
+{
+   global $post;
+   ?>
+      <div class="portfolio_meta_control">
+         <label>URL:</label>
+         <p>
+            <input type="text" name="_url" value="<?php echo get_post_meta($post->ID, '_url', TRUE); ?>" style="width: 100%;" />
+         </p>
+      </div>
+   <?php
+   
+   echo '<input type="hidden" name="meta_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
+}
+
+function portfolio_meta_save($post_id)
+{
+   if (!isset($_POST['meta_noncename']) || !wp_verify_nonce($_POST['meta_noncename'], __FILE__))
+   {
+      return $post_id;
+   }
+   
+   if ('post' == $_POST['post_type'])
+   {
+      if (!current_user_can('edit_post', $post_id))
+      {
+         return $post_id;
+      }
+   } 
+   elseif (!current_user_can('edit_page', $post_id))
+   {
+      return $post_id;
+   }
+   
+   if (isset($_POST['_url']))
+   {
+      update_post_meta($post_id, '_url', $_POST['_url']);
+   }
+   else
+   {
+      delete_post_meta($post_id, '_url');
+   }
+}
+
 
 ?>
