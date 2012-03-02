@@ -27,6 +27,16 @@ h2.heading
    font-size: 30px;
 }
 
+p
+{
+   font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+p.medium-text
+{
+   font-size: 20px;
+}
+
 
 /* Header -------------------------------------------------- */
 .accent-border
@@ -133,14 +143,22 @@ ul.menu li a
 }
 
 /* Main Content -------------------------------------------- */
-#home-content
+#content
 {
-   width: 80%;
+   width: 95%;
+   margin: auto;
+   position: relative;
+}
+
+#featured
+{
+   width: 700px;
    margin: auto;
    text-align: center;
    padding-bottom: 20px;
    padding-top: 20px;
    position: relative;
+   float: left;
 }
 
 article.project
@@ -206,19 +224,25 @@ h5.project-category a:hover
    color: rgba(1, 1, 1, 0.8);
 }
 
-/* Artists Statement --------------------------------------- */
-#artist-statement
+/* About Me Statement -------------------------------------- */
+#about
 {
-   width: 75%;
+   width: 500px;
    margin: auto;
-   text-align: center;
+   text-align: left;
    padding-top: 10px;
+   float: left;
 }
 
-p#statement
+p.medium-text
 {
-   font-size: 22px;
+   background-color: rgba(136, 136, 136, 0.2);
+   padding: 5px;
+   border-radius: 3px;
+   box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7);
 }
+
+/* Twitter News -------------------------------------------- */
 
 /* Footer -------------------------------------------------- */
 footer
