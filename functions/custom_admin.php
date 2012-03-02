@@ -12,6 +12,7 @@ function register_mysettings() {
    register_setting('theme-settings-group', 'seo_keywords');
    register_setting('theme-settings-group', 'seo_description');
    register_setting('theme-settings-group', 'artist_statement');
+   register_setting('theme-settings-group', 'twitter_username');
 }
 
 function theme_settings_page() {
@@ -26,6 +27,12 @@ function theme_settings_page() {
                <th scope="row">Google Analytics Tracking Code</th>
                <td>
                   <input name="ga_tracking_code" type="text" value="<?php echo get_option('ga_tracking_code'); ?>" />
+               </td>
+            </tr>
+            <tr>
+               <th scope="row">Twitter Username</th>
+               <td>
+                  <input name="twitter_username" type="text" value="<?php echo get_option('twitter_username'); ?>" />
                </td>
             </tr>
             <tr valgin="top">
