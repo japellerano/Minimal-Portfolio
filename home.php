@@ -6,7 +6,7 @@
       <div id="featured">
          <h2 class="heading">Recent Work</h2>
          
-         <?php $args = array('post_type' => 'project', 'posts_per_page' => 2); ?>
+         <?php $args = array('post_type' => 'project', 'posts_per_page' => 3); ?>
          <?php $loop = new WP_Query($args); ?>
          
          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -21,7 +21,7 @@
       </div>
       <div id="about">
          <h2 class="heading">About Me</h2>
-         <p class="medium-text"><?php echo get_option('artist_statement'); ?></p>
+         <p id="front-page" class="medium-text"><?php echo get_option('artist_statement'); ?></p>
       </div>
       
       <div class="clear"></div>

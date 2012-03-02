@@ -42,7 +42,7 @@ function theme_settings_page() {
             </tr>
             <th scope="row">Artist Statement</th>
             <td>
-               <textarea name="artist_statement" value="<?php echo get_option('artist_statement'); ?>" cols="80" rows="10"></textarea>
+               <textarea name="artist_statement" cols="80" rows="10"><?php echo get_option('artist_statement'); ?></textarea>
             </td>
          </table>
          <p class="submit">
