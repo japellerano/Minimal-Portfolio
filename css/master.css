@@ -154,7 +154,7 @@ ul.menu li a
 /* Portfolio ----------------------------------------------- */
 #featured
 {
-   width: 1025px;
+   width: 965px;
    margin: auto;
    text-align: center;
    padding-bottom: 20px;
@@ -242,7 +242,7 @@ h5.project-category a:hover
 /* About Me Statement -------------------------------------- */
 #about
 {
-   width: 210px;
+   width: 260px;
    margin: auto;
    text-align: left;
    padding-top: 20px;
@@ -280,6 +280,63 @@ h5.project-category a:hover
 {
    width: 25%;
    float: left;
+}
+
+h2.widgettitle
+{
+   padding-top: 10px;
+   font-size: 20px;
+   border-bottom: 1px dashed rgba(1, 1, 1, 0.5);
+   padding-bottom: 5px;
+}
+
+li.cat-item
+{
+   margin-top: 5px;
+   padding-left: 5px;
+}
+
+li.cat-item:first-child
+{
+   margin-top: 10px;
+}
+
+li.cat-item a
+{
+   text-decoration: none;
+   color: rgba(1, 1, 1, 0.5);
+}
+
+li.cat-item a:hover
+{
+   color: rgba(255, 136, 68, 1.0);
+}
+
+li.twitter-post
+{
+   margin-top: 10px;
+   /* background-color: rgba(136, 136, 136, 0.2); */
+   padding: 5px;
+   /* border-radius: 3px;
+   box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7); */
+}
+
+li.twitter-post:hover
+{
+   /* background-color: rgba(136, 136, 136, 0.4);
+   box-shadow: 2px 2px 5px rgba(0, 136, 204, 0.3); */
+}
+
+li.twitter-post a
+{
+   text-decoration: none;
+   line-height: 18px;
+   color: rgba(1, 1, 1, 0.5);
+}
+
+li.twitter-post:hover a
+{
+   color: rgba(255, 136, 68, 1.0);
 }
 
 /* Footer -------------------------------------------------- */
