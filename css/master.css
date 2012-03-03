@@ -183,7 +183,7 @@ article.project
    height: 300px;
    margin-right: 15px;
    margin-bottom: 20px;
-   background: rgba(136, 136, 136, 0.2);
+   /* background: rgba(136, 136, 136, 0.45); */
    border-radius: 3px;
    box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7);
    float: left;
@@ -199,9 +199,11 @@ article.project a
 
 article.project img
 {
-   padding: 8px;
-   background-color: rgba(136, 136, 136, 0.85);
-   border-radius: 3px;
+   margin: 8px;
+   /* background-color: rgba(136, 136, 136, 0.85); */
+   /* border-radius: 3px; */
+   box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.85);
+   max-height: 250px;
 }
 
 h3.project-title
@@ -212,7 +214,7 @@ h3.project-title
    padding-left: 10px;
    margin: auto;
    color: rgba(0, 136, 204, 1.0);
-   height: 50px;
+   height: 60px;
 }
 
 h3.project-title:hover
