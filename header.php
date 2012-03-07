@@ -20,7 +20,7 @@
    <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '<?php echo get_option('ga_tracking'); ?>']);
+  _gaq.push(['_setAccount', '<?php echo get_option('ga_tracking_code'); ?>']);
   _gaq.push(['_trackPageview']);
 
   (function() {
