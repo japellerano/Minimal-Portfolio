@@ -20,4 +20,7 @@ if (function_exists('register_sidebar'))
 
 // Custom Admin Options
 require_once(TEMPLATEPATH . '/functions/custom_admin.php');
+
+// WordPress Customization
+require_once(TEMPLATEPATH . '/functions/custom_wordpress.php');
 ?>
