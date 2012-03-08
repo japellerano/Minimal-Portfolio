@@ -7,8 +7,9 @@ function register_navigation() {
 }
 add_action('init', 'register_navigation');
 
-// Post Thumbnail Support
+// Post Thumbnail Support custom image size
 add_theme_support('post-thumbnails');
+add_image_size('portfolio-small', 249, 210);
 
 // Custom Post Type and Taxonomy for Projects
 require_once(TEMPLATEPATH . '/functions/project.php');
