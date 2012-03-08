@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Page */ ?>
+<?php /* Template Name: Home */ ?>
 <?php get_header(); ?>
 
    <div class="clear"></div>
