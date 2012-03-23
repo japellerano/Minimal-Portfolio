@@ -16,6 +16,8 @@
          ?>
       </title>
       
+      <meta charset="<?php bloginfo('charset'); ?>" />
+      
       <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
    <script type="text/javascript">
 
