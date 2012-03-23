@@ -12,7 +12,7 @@
                
                <?php the_post_thumbnail('portfolio-small'); ?>
                <h3 class="project-title"><?php the_title(); ?></h3>
-               <h5 class="project-category"><?php the_terms($post->ID, 'categoryportfolio', '', ' ', ' '); ?></h5>
+               <h5 class="project-category"><?php $terms_as_text = get_the_term_list($post->ID, 'categoryportfolio', '', ', ', ' '); if (!empty($terms_as_text)) echo strip_tags($terms_as_text); ?></h5>
             </a>
          </article>
       <?php endwhile; ?>

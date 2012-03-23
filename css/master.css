@@ -229,14 +229,10 @@ h5.project-category
    float: left;
    width: 100%;
    text-align: left;
-}
-
-h5.project-category a
-{
    color: rgba(1, 1, 1, 0.4);
 }
 
-h5.project-category a:hover
+h5.project-category:hover
 {
    color: rgba(1, 1, 1, 0.8);
 }
