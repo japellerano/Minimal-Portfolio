@@ -12,6 +12,7 @@ function register_mysettings() {
    register_setting('theme-settings-group', 'seo_keywords');
    register_setting('theme-settings-group', 'seo_description');
    register_setting('theme-settings-group', 'artist_statement');
+	register_setting('theme-settings-group', 'artist_statement_title');
    register_setting('theme-settings-group', 'twitter_username');
 }
 
@@ -46,6 +47,12 @@ function theme_settings_page() {
                <td>
                   <input name="seo_description" type="text" value="<?php echo get_option('seo_description'); ?>" />
                </td>
+            </tr>
+            <tr>
+            	<th scope="row">Artist Statement Title</th>
+            	<td>
+            		<input name="artist_statement_title" type="text" value="<?php echo get_option('artist_statement_title'); ?>" />
+            	</td>
             </tr>
             <th scope="row">Artist Statement</th>
             <td>

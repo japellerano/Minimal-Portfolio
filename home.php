@@ -20,7 +20,7 @@
          <?php endwhile; ?>
       </div>
       <div id="about">
-         <h2 class="heading"></h2>
+         <h2 class="heading"><?php echo get_option('artist_statement_title'); ?></h2>
          <p id="front-page" class="medium-text"><?php echo get_option('artist_statement'); ?></p>
       </div>
       
