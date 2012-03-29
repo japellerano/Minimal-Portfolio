@@ -1,0 +1,64 @@
+/* Standard Smartphones ------------------------------------ */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+{
+}
+
+@media only screen and (min-width: 321px)
+{
+}
+
+@media only screen and (max-width: 320px)
+{
+	#wrapper
+	{
+		width: 100%;
+	}
+}
+
+/* Ipad & tablets ------------------------------------------ */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+{
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+{
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+{
+}
+
+/* Desktop and Laptops ------------------------------------- */
+@media only screen
+and (min-width: 1025px)
+{
+}
+
+/* Large Screen Desktops and Laptops ----------------------- */
+@media only screen
+and (min-width: 1280px)
+{
+	#wrapper
+	{
+		width: 85%;
+		margin: auto;
+		margin-top: 40px;
+	}
+}
+
+/* iPhone 4 ------------------------------------------------ */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ration: 1.5)
+{
+}
