@@ -1,7 +1,19 @@
+/* Basic Styles -------------------------------------------- */
+body
+{
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
 /* Typography ---------------------------------------------- */
 h1
 {
 	font-size: 225%;
+	font-family: Georgia, serif;
+}
+
+h2
+{
+	font-size: 180%;
 	font-family: Georgia, serif;
 }
 
