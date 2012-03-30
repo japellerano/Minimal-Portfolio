@@ -3,7 +3,6 @@
 <?php get_header(); ?>
 
 <div id="content">
-   <h2 id="page" class="heading"><?php the_title(); ?></h2>
    <div id="posts">
       <?php $args = array('posts_per_page' => 5); ?>
       <?php $loop = new WP_Query($args); ?>
