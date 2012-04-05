@@ -1,35 +1,10 @@
-/* Basic Styles -------------------------------------------- */
 body
 {
-	font-family: Helvetica, Verdana, Arial, sans-serif;
+	background-color: rgba(136, 136, 136, 0.3);
+	font-size: 12px;
 }
 
-/* Typography ---------------------------------------------- */
 h1
 {
-	font-size: 225%;
-	font-family: Georgia, serif;
-}
-
-h2
-{
-	font-size: 180%;
-	font-family: Georgia, serif;
-}
-
-h3
-{
-	font-size: 140%;
-	font-weight: normal;
-}
-
-a
-{
-	text-decoration: none;
-}
-
-.clear
-{
-	clear: both;
-	height: 8px;
+	font-size: 230%;
 }
