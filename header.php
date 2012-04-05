@@ -47,14 +47,15 @@
 		
 	</head>
    <body>
-      <div id="wrapper">
-         <div class="accent-border"></div>
-         <header>
-            <h1 id="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-            
-            <h3 id="job-description"><?php bloginfo('description'); ?></h3>
-            
-            <nav>
-               <?php wp_nav_menu(array('theme_location' => 'menu-1', 'container' => false)); ?>
-            </nav>
-         </header>
+   	<header>
+   		<div class="container">
+   			<div id="identity">
+	   			<h1 id="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+	   			<h3 id="job-description"><?php bloginfo('description'); ?></h3>
+	   		</div>
+				<nav>
+					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'container' => false)); ?>
+				</nav>
+			</div>
+			<div class="clear"></div>
+		</header>

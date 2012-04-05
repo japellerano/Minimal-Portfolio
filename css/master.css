@@ -8,3 +8,18 @@ h1
 {
 	font-size: 230%;
 }
+
+h3
+{
+	font-size: 125%;
+}
+
+nav a
+{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.clear
+{
+	clear: both;
+}
