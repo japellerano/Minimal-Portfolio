@@ -17,7 +17,7 @@
 						<h5 class="project-category"><?php the_terms($post->ID, 'categoryportfolio', '', ' ', ' '); ?></h5>
 						
 						<?php the_excerpt(); ?>
-						<a class="read-more" href="<?php the_permalink(); ?>">See More</a>
+						<!-- <a class="read-more" href="<?php the_permalink(); ?>">See More</a> -->
 					</article>
 				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>
@@ -25,18 +25,31 @@
 			
 			<!-- Skills -->
 			<div class="skills">
-				<?php $skill_args = array('post_type' => 'skills', 'posts_per_page' => 3); ?>
+				<?php $skill_args = array('post_type' => 'skills', 'posts_per_page' => 4); ?>
 				<?php $skill_loop = new WP_Query($skill_args); ?>
 				
 				<?php while ($skill_loop->have_posts()) : $skill_loop->the_post(); ?>
 					<article class="skill">
 						<?php 
-							if(get_post_meta($post->ID, 'skill_meta_box_select', true))
+							$first 	= get_option('first_class');
+							$second 	= get_option('second_class');
+							$third 	= get_option('third_class');
+							
+							if (get_post_meta($post->ID, 'skill_meta_box_select', true) == "first")
 							{
-								echo get_post_meta($post->ID, 'skill_meta_box_select', true);
+								echo '<img src="'.$first.'" class="first symbol" height="30px" width="30px" />';
+							}
+							elseif (get_post_meta($post->ID, 'skill_meta_box_select', true) == "second")
+							{
+								echo '<img src="'.$second.'" class="second symbol" height="30px" width="30px" />';
+							}
+							elseif (get_post_meta($post->ID, 'skill_meta_box_select', true) == "third")
+							{
+								echo '<img src="'.$third.'" class="third symbol" height="30px" width="30px" />';
 							}
 						?>
-						<h2 class="skill-title"><?php the_title(); ?></h2>
+						<h2 class="skill-title"><?php the_title(); ?></h2><br />
+						<!-- <h5 class="skill-category"><?php echo ucfirst(get_post_meta($post->ID, 'skill_meta_box_select', true)); ?></h5> -->
 					</article>
 				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>

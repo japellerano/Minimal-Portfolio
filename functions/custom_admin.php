@@ -14,6 +14,9 @@ function register_mysettings() {
    register_setting('theme-settings-group', 'artist_statement');
 	register_setting('theme-settings-group', 'artist_statement_title');
    register_setting('theme-settings-group', 'twitter_username');
+   register_setting('theme-settings-group', 'first_class');
+   register_setting('theme-settings-group', 'second_class');
+   register_setting('theme-settings-group', 'third_class');
 }
 
 function theme_settings_page() {
@@ -29,6 +32,24 @@ function theme_settings_page() {
                <td>
                   <input name="ga_tracking_code" type="text" value="<?php echo get_option('ga_tracking_code'); ?>" />
                </td>
+            </tr>
+            <tr>
+            	<th scope="row">First Class Skill Rating</th>
+            	<td>
+            		<input name="first_class" type="text" value="<?php echo get_option('first_class'); ?>" />
+            	</td>
+            </tr>
+            <tr>
+            	<th scope="row">Second Class Skill Rating</th>
+            	<td>
+            		<input name="second_class" type="text" value="<?php echo get_option('second_class'); ?>" />
+            	</td>
+            </tr>
+            <tr>
+            	<th scope="row">Third Class Skill Rating</th>
+            	<td>
+            		<input name="third_class" type="text" value="<?php echo get_option('third_class'); ?>" />
+            	</td>
             </tr>
             <tr>
                <th scope="row">Twitter Username</th>
