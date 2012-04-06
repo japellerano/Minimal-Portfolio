@@ -12,7 +12,7 @@ function register_mysettings() {
    register_setting('theme-settings-group', 'seo_keywords');
    register_setting('theme-settings-group', 'seo_description');
    register_setting('theme-settings-group', 'artist_statement');
-	register_setting('theme-settings-group', 'artist_statement_title');
+	register_setting('theme-settings-group', 'laterstars_url');
    register_setting('theme-settings-group', 'twitter_username');
    register_setting('theme-settings-group', 'first_class');
    register_setting('theme-settings-group', 'second_class');
@@ -70,9 +70,9 @@ function theme_settings_page() {
                </td>
             </tr>
             <tr>
-            	<th scope="row">Artist Statement Title</th>
+            	<th scope="row">LaterStars URL</th>
             	<td>
-            		<input name="artist_statement_title" type="text" value="<?php echo get_option('artist_statement_title'); ?>" />
+            		<input name="laterstars_url" type="text" value="<?php echo get_option('laterstars_url'); ?>" />
             	</td>
             </tr>
             <th scope="row">Artist Statement</th>

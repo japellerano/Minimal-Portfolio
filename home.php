@@ -68,11 +68,43 @@
 			<!-- News -->
 			<div class="news third-container">
 				<div class="third-header"><h2 class="small-header">News</h2></div>
+				<div class="third-content">
+					<?php
+						$news_query = new WP_Query('category_name=news&posts_per_page=5');
+						while ($news_query->have_posts()) : $news_query->the_post(); ?>
+							<article class="news-post">
+								<h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							</article>
+						<?php endwhile; ?>
+				</div>
 			</div>
 			
 			<!-- Twitter -->
 			<div class="twitter third-container">
 				<div class="third-header"><h2 class="small-header">Twitter</h2></div>
+				<div class="third-content">
+					<?php
+						$twitter = get_option('twitter_username');
+						include_once(ABSPATH . WPINC . '/feed.php');
+						$rss = fetch_feed('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name='.$twitter.'');
+						$maxitems = $rss->get_item_quantity(5);
+						$rss_items = $rss->get_items(0, $maxitems);
+					?>
+					
+					<ul class="twitter">
+						<?php
+							if ($maxitems == 0)
+								echo '<li>No items.</li>';
+							else
+								foreach ($rss_items as $item) : ?>
+									<li class="twitter-item">
+										<a href="<?php echo $item->get_permalink(); ?>">
+											<?php echo $item->get_title(); ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
+					</ul>
+				</div>
 			</div>
 			
 			<!-- Favorited Twitter -->
@@ -80,22 +112,23 @@
 				<div class="third-header"><h2 class="small-header">Twitter Favorites</h2></div>
 				<div class="third-content">
 					<?php
+						$laterstars = get_option('laterstars_url');
 						include_once(ABSPATH . WPINC . '/feed.php');
-						$rss = fetch_feed('feed://laterstars.com/japellerano.atom?filter=all');
-						$maxitems = $rss->get_item_quantity(10);
-						$rss_items = $rss->get_items(0, $maxitems);
+						$rss_fav = fetch_feed($laterstars);
+						$maxitems_fav = $rss_fav->get_item_quantity(5);
+						$rss_items_fav = $rss_fav->get_items(0, $maxitems_fav);
 					?>
 	
 					<ul class="twitter">
 						<?php 
-							if ($maxitems == 0) 
+							if ($maxitems_fav == 0) 
 								echo '<li>No items.</li>';
 							else
 								// Loop through each feed item and display each item as a hyperlink.
-								foreach ( $rss_items as $item ) : ?>
+								foreach ( $rss_items_fav as $item_fav ) : ?>
 									<li class="twitter-item">
-										<a href='<?php echo $item->get_permalink(); ?>'>
-											<?php echo $item->get_title(); ?>
+										<a href='<?php echo $item_fav->get_permalink(); ?>'>
+											<?php echo $item_fav->get_title(); ?>
 										</a>
 									</li>
 								<?php endforeach; ?>
