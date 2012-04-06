@@ -9,9 +9,33 @@ h1
 	font-size: 230%;
 }
 
+h2
+{
+	font-size: 175%;
+}
+
 h3
 {
 	font-size: 125%;
+}
+
+h4
+{
+}
+
+h5
+{
+}
+
+p
+{
+	font-size: 100%;
+}
+
+a
+{
+	color: rgba(0, 0, 0, 1.0);
+	text-decoration: none;
 }
 
 nav a

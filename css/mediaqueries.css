@@ -110,8 +110,8 @@
 	/* ------------------------------------------------------ */
 	.featured
 	{
-		padding-left: 10px;
-		padding-right: 10px;
+		padding: 10px;
+		line-height: 1.5;
 	}
 	
 	article.featured
@@ -129,5 +129,31 @@
 	{
 		float: left;
 		margin-right: 10px;
+	}
+	
+	h2.project-title
+	{
+	}
+	
+	h2.project-title a
+	{
+		text-decoration: none;
+		color: rgba(0, 0, 0, 1.0);
+	}
+	
+	h5.project-category
+	{
+	}
+	
+	h5.project-category a
+	{
+		color: rgba(0, 103, 165, 1.0);
+		text-decoration: none;
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	
+	article.featured p
+	{
+		font-family: 
 	}
 }

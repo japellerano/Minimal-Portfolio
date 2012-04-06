@@ -30,7 +30,13 @@
 				
 				<?php while ($skill_loop->have_posts()) : $skill_loop->the_post(); ?>
 					<article class="skill">
-						<?php echo get_post_custom($post->ID); ?> <h2 class="skill-title"><?php the_title(); ?></h2>
+						<?php 
+							if(get_post_meta($post->ID, 'skill_meta_box_select', true))
+							{
+								echo get_post_meta($post->ID, 'skill_meta_box_select', true);
+							}
+						?>
+						<h2 class="skill-title"><?php the_title(); ?></h2>
 					</article>
 				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>

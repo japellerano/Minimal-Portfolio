@@ -63,115 +63,44 @@ function register_skills() {
    );
 }
 
-// Meta Box
-function add_skill_box()
-{
-	add_meta_box(
-		'custom_meta_box',
-		'Skill Level',
-		'show_custom_meta_box',
-		'skills',
-		'normal',
-		'high'
-	);
-}
-add_action('add_meta_boxes', 'add_skill_box');
+// Skill Rating
 
-$prefix = 'skills_';
-$custom_meta_fields = array(
-	array(
-		'label'		=> 'Skill Classification',
-		'desc'		=> 'Skill class',
-		'id'			=> $prexfix.'',
-		'type'		=> 'checkbox_group',
-		'options'	=> array(
-			'one' 	=> array(
-				'label'	=> 'First Class',
-				'value'	=> 'first'
-			),
-			'two'		=> array(
-				'label'	=> 'Second Class',
-				'value'	=> 'second'
-			),
-			'three'	=> array(
-				'label'	=> 'Second Class',
-				'value'	=> 'third'
-			)
-		)
-	)
-);
-
-function show_custom_meta_box()
+// Add Meta Box
+add_action('add_meta_boxes', 'skill_meta_box_add');
+function skill_meta_box_add()
 {
-	global $custom_meta_fields, $post;
-	
-	echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
-	
-	echo '<table class="form-table">';
-	foreach ($custom_meta_fields as $field)
-	{
-		$meta = get_post_meta($post->ID, $field['id'], true);
-		
-		echo 
-			'<tr>
-				<th><label for="'.$field['id'].'">'.$field['label'].'</label></th>
-				<td>';
-					switch($field['type'])
-					{
-						case 'checkbox_group':
-							foreach ($field['options'] as $option)
-							{
-								echo '<input type="checkbox" value="'.$option['value'].'" name="'.$field['id'].'[]" id="'.$option['value'].'"', $meta && in_array($option['value'], $meta) ? ' checked="checked"' : '', '/> <label for="'.$option['value'].'">'.$option['label'].'</label><br />';
-							}
-							echo '<span class="description">'.$field['desc'].'</span>';
-						break;
-					}
-				echo '</td></tr>';
-	}
-	echo '</table>';
+	add_meta_box('skill-meta-box-id', 'Skill Rating', 'skill_meta_box_cb', 'skills', 'side', 'high');
 }
 
-function save_custom_meta($post_id)
+// Render Meta Box
+function skill_meta_box_cb($post)
 {
-	global $custom_meta_fields;
+	echo '<b>Rate your skill level.</b><br />';
 	
-	if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
-		return $post_id;
-		
-	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-		return $post_id;
-	
-	if ('page' == $_POST['post_type'])
-	{
-		if (!current_user_can('edit_page', $post_id))
-			return $post_id;
-	}
-	elseif (!current_user_can('edit_post', $post_id))
-	{
-		return $post_id;
-	}
-	
-	foreach ($custom_meta_fields as $field) 
-	{
-		if ($field['type'] == 'tax_select') 
-			continue;
-			
-		$old = get_post_meta($post_id, $field['id'], true);
-		$new = $_POST[$field['id']];
-		
-		if ($new && $new != $old) 
-		{
-			update_post_meta($post_id, $field['id'], $new);
-		} 
-		elseif ('' == $new && $old) 
-		{
-			delete_post_meta($post_id, $field['id'], $old);
-		}
-	}
-	
-	$post = get_post($post_id);
-	$category = $_POST['category'];
-	wp_set_object_terms( $post_id, $category, 'category' );
+	$values = get_post_custom($post->ID);
+	$selected = isset($values['skill_meta_box_select']) ? esc_attr($values['skill_meta_box_select'][0]) : '';
+	wp_nonce_field('my_meta_box_nonce', 'meta_box_nonce');
+	?>
+		<label for="skill_meta_box_select">Skill Leve</label>
+		<select name="skill_meta_box_select" id="skill_meta_box_select">
+			<option value="first" <?php selected($selected, 'first'); ?>>First Class</option>
+			<option value="second" <?php selected($selected, 'second'); ?>>Second Class</option>
+			<option value="third" <?php selected($selected, 'third'); ?>>Third Class</option>
+		</select>
+	<?php
 }
-add_action('save_post', 'save_custom_meta');
+
+add_action('save_post', 'skill_meta_box_save');
+function skill_meta_box_save($post_id)
+{
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+	
+	if (!isset($_POST['meta_box_nonce']) || !wp_verify_nonce($_POST['meta_box_nonce'], 'my_meta_box_nonce')) return;
+	
+	if (!current_user_can('edit_post')) return;
+	
+	if (isset($_POST['skill_meta_box_select']))
+		update_post_meta($post_id, 'skill_meta_box_select', esc_attr($_POST['skill_meta_box_select']));
+}
+
 ?>
