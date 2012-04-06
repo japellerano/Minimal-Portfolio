@@ -237,7 +237,7 @@
 	.third-header
 	{
 		background-color: rgba(0, 0, 0, 1.0);
-		width: 100%;
+		width: 345px;
 		padding-top: 8px;
 		padding-bottom: 8px;
 	}
@@ -250,8 +250,28 @@
 	
 	.third-content
 	{
-		width: 100%;
+		width: 343px;
 		border: 1px solid rgba(0, 0, 0, 1.0);
+	}
+	
+	.third-content ul.twitter
+	{
+		padding: 8px;
+	}
+	
+	li.twitter-item
+	{
+		width: 100%;
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+		font-size: 110%;
+	}
+	
+	li.twitter-item a
+	{
+		color: rgba(0, 103, 165, 1.0);
 	}
 	
 	/* ------------------------------------------------------ */

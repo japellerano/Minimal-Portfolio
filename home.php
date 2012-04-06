@@ -78,6 +78,29 @@
 			<!-- Favorited Twitter -->
 			<div class="twitter third-container">
 				<div class="third-header"><h2 class="small-header">Twitter Favorites</h2></div>
+				<div class="third-content">
+					<?php
+						include_once(ABSPATH . WPINC . '/feed.php');
+						$rss = fetch_feed('feed://laterstars.com/japellerano.atom?filter=all');
+						$maxitems = $rss->get_item_quantity(10);
+						$rss_items = $rss->get_items(0, $maxitems);
+					?>
+	
+					<ul class="twitter">
+						<?php 
+							if ($maxitems == 0) 
+								echo '<li>No items.</li>';
+							else
+								// Loop through each feed item and display each item as a hyperlink.
+								foreach ( $rss_items as $item ) : ?>
+									<li class="twitter-item">
+										<a href='<?php echo $item->get_permalink(); ?>'>
+											<?php echo $item->get_title(); ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
