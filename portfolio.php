@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <div id="content">
-   <div id="portfolio">
+   <div class="container">
       <?php $args = array('post_type' => 'project'); ?>
       <?php $loop = new WP_Query($args); ?>
       

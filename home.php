@@ -74,6 +74,7 @@
 						while ($news_query->have_posts()) : $news_query->the_post(); ?>
 							<article class="news-post">
 								<h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<p class="meta">By: <?php the_author(); ?>. On: <?php the_time('jS F, Y'); ?>. Under: <?php the_category(', '); ?></p>
 							</article>
 						<?php endwhile; ?>
 				</div>
