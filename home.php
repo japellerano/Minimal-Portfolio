@@ -23,6 +23,11 @@
 				<?php wp_reset_query(); ?>
 			</div>
 			
+			<!-- About -->
+			<div class="about">
+				<p><?php echo get_option('artist_statement'); ?></p>
+			</div>
+			
 			<!-- Skills -->
 			<div class="skills">
 				<?php $skill_args = array('post_type' => 'skills', 'posts_per_page' => 4); ?>
@@ -53,8 +58,27 @@
 					</article>
 				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>
-			</div>   	
-			<div class="clear"></div>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="container bottom">
+
+			<!-- News -->
+			<div class="news third-container">
+				<div class="third-header"><h2 class="small-header">News</h2></div>
+			</div>
+			
+			<!-- Twitter -->
+			<div class="twitter third-container">
+				<div class="third-header"><h2 class="small-header">Twitter</h2></div>
+			</div>
+			
+			<!-- Favorited Twitter -->
+			<div class="twitter third-container">
+				<div class="third-header"><h2 class="small-header">Twitter Favorites</h2></div>
+			</div>
 		</div>
 	</div>
 <?php get_footer(); ?>

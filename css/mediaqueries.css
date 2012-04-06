@@ -110,7 +110,8 @@
 	/* ------------------------------------------------------ */
 	.featured
 	{
-		padding: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
 		line-height: 1.5;
 		width: 520px;
 		float: left;
@@ -163,9 +164,16 @@
 	/* ------------------------------------------------------ */
 	.about
 	{
-		width: 320px;
+		width: 340px;
 		float: left;
 		padding: 10px;
+	}
+	
+	.about p
+	{
+		line-height: 1.4;
+		font-size: 125%;
+		word-spacing: 1px;
 	}
 	
 	/* ------------------------------------------------------ */
@@ -185,7 +193,7 @@
 		clear-after: both;
 		padding-bottom: 5px;
 		width: 100%;
-		border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+		/* border-bottom: 1px dashed rgba(0, 0, 0, 0.3); */
 		margin-bottom: 10px;
 	}
 	
@@ -210,5 +218,54 @@
 		float: left;
 	}
 	
+	/* ------------------------------------------------------ */
+	/* Home Page Bottom Page                                  */
+	/* ------------------------------------------------------ */
+	.bottom
+	{
+		margin-top: 20px;
+	}
+	
+	.third-container
+	{
+		float: left;
+		width: 345px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.third-header
+	{
+		background-color: rgba(0, 0, 0, 1.0);
+		width: 100%;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	
+	h2.small-header
+	{
+		color: rgba(255, 255, 255, 1.0);
+		padding-left: 10px;
+	}
+	
+	.third-content
+	{
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, 1.0);
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Footer                                                 */
+	/* ------------------------------------------------------ */
+	footer
+	{
+		margin-top: 30px;
+		width: 100%;
+	}
+	
+	footer p
+	{
+		line-height: 1.4;
+	}
 	
 }
