@@ -24,7 +24,7 @@
 			</div>
 			
 			<!-- About -->
-			<div class="about">
+			<div id="about">
 				<p><?php echo get_option('artist_statement'); ?></p>
 			</div>
 			

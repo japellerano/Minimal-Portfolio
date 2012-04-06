@@ -15,6 +15,19 @@
 		margin-top: 35px;
 	}
 	
+	#page-wrapper
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: auto;
+		line-height: 1.5;
+	}
+	
+	h2#page
+	{
+		margin-bottom: 10px;
+	}
+	
 	/* ------------------------------------------------------ */
 	/* Header                                                 */
 	/* ------------------------------------------------------ */
@@ -111,20 +124,15 @@
 	.featured
 	{
 		padding-left: 10px;
-		padding-right: 10px;
+		padding-right: 15px;
 		line-height: 1.5;
-		width: 520px;
 		float: left;
 	}
 	
 	article.featured
 	{
 		float: left;
-		width: 510px;
-	}
-	
-	article.featured:first-child
-	{
+		width: 530px;
 		margin-right: 10px;
 	}
 	
@@ -192,14 +200,16 @@
 	/* ------------------------------------------------------ */
 	/* Home Page About                                        */
 	/* ------------------------------------------------------ */
-	.about
+	#about
 	{
-		width: 340px;
+		width: 300px;
 		float: left;
-		padding: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 10px;
 	}
 	
-	.about p
+	#about p
 	{
 		line-height: 1.4;
 		font-size: 125%;
@@ -211,7 +221,8 @@
 	/* ------------------------------------------------------ */
 	.skills
 	{
-		padding: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
 		line-height: 1.5;
 		width: 160px;
 		float: left;
