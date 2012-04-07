@@ -1,6 +1,6 @@
 body
 {
-	background-color: rgba(136, 136, 136, 0.3);
+	background-color: rgba(255, 255, 255, 1.0);
 	font-size: 12px;
 }
 
@@ -11,17 +11,17 @@ h1, h2, h3, h4, h5, h6
 
 h1
 {
-	font-size: 230%;
+	font-size: 280%;
 }
 
 h2
 {
-	font-size: 175%;
+	font-size: 200%;
 }
 
 h3
 {
-	font-size: 125%;
+	font-size: 175%;
 }
 
 h4
