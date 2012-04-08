@@ -63,7 +63,22 @@ function register_project_post() {
    );
 }
 
-// 
+// Image Slider Meta Box
+add_action('admin_init', 'images_meta_init');
+
+function images_meta_init()
+{
+	add_meta_box('images_meta', 'Slideshow Images', 'images_meta_setup', 'project', 'normal', 'low');
+	add_action('save_post', 'images_meta_save');
+}
+
+function images_meta_setup()
+{
+}
+
+function images_meta_save($post_id)
+{
+}
 
 
 // URL Meta Box
