@@ -63,76 +63,58 @@ function register_project_post() {
    );
 }
 
-// Image Slider Meta Box
-add_action('admin_init', 'images_meta_init');
-
-function images_meta_init()
-{
-	add_meta_box('images_meta', 'Slideshow Images', 'images_meta_setup', 'project', 'normal', 'low');
-	add_action('save_post', 'images_meta_save');
-}
-
-function images_meta_setup()
-{
-}
-
-function images_meta_save($post_id)
-{
-}
-
-
 // URL Meta Box
-add_action('admin_init', 'portfolio_meta_init');
-
-function portfolio_meta_init()
+add_action('add_meta_boxes', 'portfolio_meta_box_add');
+function portfolio_meta_box_add()
 {
-   add_meta_box('portfolio_meta', 'Project Website', 'portfolio_meta_setup', 'project', 'side', 'low');
-   add_action('save_post', 'portfolio_meta_save');
+	add_meta_box('portfolio-meta-box-id', 'Project Options', 'portfolio_meta_box_cb', 'project', 'normal', 'low');
 }
 
-function portfolio_meta_setup()
+function portfolio_meta_box_cb($post)
 {
-   global $post;
-   ?>
-      <div class="portfolio_meta_control">
-         <label>URL:</label>
-         <p>
-            <input type="text" name="_url" value="<?php echo get_post_meta($post->ID, '_url', TRUE); ?>" style="width: 100%;" />
-         </p>
-      </div>
-   <?php
-   
-   echo '<input type="hidden" name="meta_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
+	echo '<b>Project Website</b><br />';
+	
+	$values = get_post_custom($post->ID);
+	$text_url = isset($values['portfolio_meta_box_url']) ? esc_attr($values['portfolio_meta_box_url'][0]) : '';
+	$text_image1 = isset($values['portfolio_meta_box_image1']) ? esc_attr($values['portfolio_meta_box_image1'][0]) : '';
+	$text_image2 = isset($values['portfolio_meta_box_image2']) ? esc_attr($values['portfolio_meta_box_image2'][0]) : '';
+	wp_nonce_field('my_meta_box_nonce', 'meta_box_nonce');
+?>
+	<p>
+		<label for="portfolio_meta_box_url">Website Url: </label>
+		<input type="text" name="portfolio_meta_box_url" id="portfolio_meta_box_url" value="<?php echo $text_url; ?>" />
+	</p>
+<?php	
+	echo '<b>Images for Slideshow</b><br />';
+?>	
+	<p>
+		<label for="portfolio_meta_box_image1">Image One: </label>
+		<input type="text" name="portfolio_meta_box_image1" id="portfolio_meta_box_image1" value="<?php echo $text_image1; ?>" />
+	</p>
+	<p>
+		<label for="portfolio_meta_box_image2">Image Two: </label>
+		<input type="text" name="portfolio_meta_box_image2" id="portfolio_meta_box_image2" value="<?php echo $text_image2; ?>" />
+	</p>
+<?php
 }
 
-function portfolio_meta_save($post_id)
+add_action('save_post', 'portfolio_meta_box_save');
+function portfolio_meta_box_save($post_id)
 {
-   if (!isset($_POST['meta_noncename']) || !wp_verify_nonce($_POST['meta_noncename'], __FILE__))
-   {
-      return $post_id;
-   }
-   
-   if ('post' == $_POST['post_type'])
-   {
-      if (!current_user_can('edit_post', $post_id))
-      {
-         return $post_id;
-      }
-   } 
-   elseif (!current_user_can('edit_page', $post_id))
-   {
-      return $post_id;
-   }
-   
-   if (isset($_POST['_url']))
-   {
-      update_post_meta($post_id, '_url', $_POST['_url']);
-   }
-   else
-   {
-      delete_post_meta($post_id, '_url');
-   }
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+	
+	if (!isset($_POST['meta_box_nonce']) || !wp_verify_nonce($_POST['meta_box_nonce'], 'my_meta_box_nonce')) return;
+	
+	if (!current_user_can('edit_post')) return;
+	
+	if (isset($_POST['portfolio_meta_box_url']))
+		update_post_meta($post_id, 'portfolio_meta_box_url', esc_attr($_POST['portfolio_meta_box_url']));
+		
+	if (isset($_POST['portfolio_meta_box_image1']))
+		update_post_meta($post_id, 'portfolio_meta_box_image1', esc_attr($_POST['portfolio_meta_box_image1']));
+		
+	if (isset($_POST['portfolio_meta_box_image2']))
+		update_post_meta($post_id, 'portfolio_meta_box_image2', esc_attr($_POST['portfolio_meta_box_image2']));
 }
-
 
 ?>

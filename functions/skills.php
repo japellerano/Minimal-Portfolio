@@ -81,7 +81,7 @@ function skill_meta_box_cb($post)
 	$selected = isset($values['skill_meta_box_select']) ? esc_attr($values['skill_meta_box_select'][0]) : '';
 	wp_nonce_field('my_meta_box_nonce', 'meta_box_nonce');
 	?>
-		<label for="skill_meta_box_select">Skill Leve</label>
+		<label for="skill_meta_box_select">Skill Level: </label>
 		<select name="skill_meta_box_select" id="skill_meta_box_select">
 			<option value="first" <?php selected($selected, 'first'); ?>>First Class</option>
 			<option value="second" <?php selected($selected, 'second'); ?>>Second Class</option>
