@@ -3,17 +3,7 @@
    <head>
    
       <title>
-         <?php 
-            if (is_home()) { 
-               bloginfo('name'); 
-               echo " | ";
-               bloginfo('description');
-            } else {
-               wp_title();
-               echo " | ";
-               bloginfo('name');
-            }
-         ?>
+         <?php if (is_home()) { echo bloginfo('name');  echo ' | '; echo bloginfo('description'); } else { echo wp_title(' | ', false, right); echo bloginfo('name'); } ?>
       </title>
       
       <meta charset="<?php bloginfo('charset'); ?>" />
