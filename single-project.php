@@ -20,7 +20,7 @@
 							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image3_desc', true); ?>
 						</span>
 					</a>
-					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image4', true); ?>" />
+					<a href="#"><img src="<?php echo get_post_meta( 'portfolio_meta_box_image4', true); ?>" />
 						<span class="description">
 							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image4_desc', true); ?>
 						</span>
@@ -31,7 +31,8 @@
 			<div class="right-column">
 				<h2 class="project-title"><?php the_title(); ?></h2>
 				<div class="information">
-					<p class="website-link"><a href="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_url', true); ?>"><?php echo get_post_meta($post->ID, 'portfolio_meta_box_url', true); ?></a></p>
+					<?php $link = get_post_meta($post->ID, 'portfolio_meta_box_url', true); ?>
+					<p class="website-link"><a href="http://<?php echo $link; ?>"><?php echo $link; ?></a></p>
 					
 					<p class="development">Scope: <?php the_terms($post->ID, 'categoryportfolio', '', ', ', ' '); ?></p>
 				</div>

@@ -12,7 +12,7 @@
 				<?php wp_reset_query(); ?>
 			</div>
 
-			<div id="right-text">
+			<div class="right-text">
 				<h2 class="heading" id="page">Skills</h2>
 				<?php $args = array('post_type' => 'skills'); ?>
 				<?php $query = new WP_Query($args); ?>

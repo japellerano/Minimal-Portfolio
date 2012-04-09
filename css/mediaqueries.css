@@ -320,6 +320,7 @@
 	{
 		float: left;
 		padding-right: 8px;
+		width: 96%;
 	}
 	
 	.right-column p
@@ -339,7 +340,7 @@
 	
 	.right-text
 	{
-		float: left;
+		float: right;
 		width: 300px;
 	}
 	
