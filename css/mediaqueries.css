@@ -213,6 +213,7 @@
 		width: 76%;
 		float: left;
 		margin-right: 20px;
+		margin-bottom: 30px;
 	}
 	
 	.single-post p
@@ -266,5 +267,63 @@
 	li.twitter-post
 	{
 		margin-bottom: 8px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Single Portfolio Page                                  */
+	/* ------------------------------------------------------ */
+	.single-project
+	{
+		margin-bottom: 30px;
+	}
+	
+	.coin-slider
+	{
+		float: left;
+	}
+	
+	.left-column
+	{
+		float: left;
+		width: 570px;
+		margin-right: 10px;
+	}
+	
+	.right-column
+	{
+		float: left;
+		width: 470px;
+	}
+	
+	.right-column h2.project-title
+	{
+		margin-bottom: 10px;
+	}
+	
+	.information
+	{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 5px;
+		background-color: rgba(136, 136, 136, 0.3);
+		border: 1px solid rgba(136, 136, 136, 0.7);
+		border-radius: 4px;
+	}
+	
+	.information a
+	{
+		color: rgba(255, 51, 51, 1.0);
+		font-weight: bold;
+	}
+	
+	p.website-link
+	{
+		float: left;
+		padding-right: 8px;
+	}
+	
+	.right-column p
+	{
+		line-height: 1.7;
 	}
 }

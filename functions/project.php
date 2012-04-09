@@ -77,7 +77,16 @@ function portfolio_meta_box_cb($post)
 	$values = get_post_custom($post->ID);
 	$text_url = isset($values['portfolio_meta_box_url']) ? esc_attr($values['portfolio_meta_box_url'][0]) : '';
 	$text_image1 = isset($values['portfolio_meta_box_image1']) ? esc_attr($values['portfolio_meta_box_image1'][0]) : '';
+	$text_image1_desc = isset($values['portfolio_meta_box_image1_desc']) ? esc_attr($values['portfolio_meta_box_image1_desc'][0]) : '';
+	
 	$text_image2 = isset($values['portfolio_meta_box_image2']) ? esc_attr($values['portfolio_meta_box_image2'][0]) : '';
+	$text_image2_desc = isset($values['portfolio_meta_box_image2_desc']) ? esc_attr($values['portfolio_meta_box_image2_desc'][0]) : '';
+	
+	$text_image3 = isset($values['portfolio_meta_box_image3']) ? esc_attr($values['portfolio_meta_box_image3'][0]) : '';
+	$text_image3_desc = isset($values['portfolio_meta_box_image3_desc']) ? esc_attr($values['portfolio_meta_box_image3_desc'][0]) : '';
+	
+	$text_image4 = isset($values['portfolio_meta_box_image4']) ? esc_attr($values['portfolio_meta_box_image4'][0]) : '';
+	$text_image4_desc = isset($values['portfolio_meta_box_image4_desc']) ? esc_attr($values['portfolio_meta_box_image4_desc'][0]) : '';
 	wp_nonce_field('my_meta_box_nonce', 'meta_box_nonce');
 ?>
 	<p>
@@ -89,11 +98,27 @@ function portfolio_meta_box_cb($post)
 ?>	
 	<p>
 		<label for="portfolio_meta_box_image1">Image One: </label>
-		<input type="text" name="portfolio_meta_box_image1" id="portfolio_meta_box_image1" value="<?php echo $text_image1; ?>" />
+		<input type="text" name="portfolio_meta_box_image1" id="portfolio_meta_box_image1" value="<?php echo $text_image1; ?>" /><br />
+		<label for="portfolio_meta_box_image1_desc">Image Two Description: </label>
+		<textarea class="image_desc" id="portfolio_meta_box_image1_desc" name="portfolio_meta_box_image1_desc"><?php echo $text_image1_desc; ?></textarea>
 	</p>
 	<p>
 		<label for="portfolio_meta_box_image2">Image Two: </label>
-		<input type="text" name="portfolio_meta_box_image2" id="portfolio_meta_box_image2" value="<?php echo $text_image2; ?>" />
+		<input type="text" name="portfolio_meta_box_image2" id="portfolio_meta_box_image2" value="<?php echo $text_image2; ?>" /><br />
+		<label for="portfolio_meta_box_image2_desc">Image Two Description: </label>
+		<textarea class="image_desc" id="portfolio_meta_box_image2_desc" name="portfolio_meta_box_image2_desc"><?php echo $text_image2_desc; ?></textarea>
+	</p>
+	<p>
+		<label for="portfolio_meta_box_image3">Image Three: </label>
+		<input type="text" name="portfolio_meta_box_image3" id="portfolio_meta_box_image3" value="<?php echo $text_image3; ?>" /><br />
+		<label for="portfolio_meta_box_image3_desc">Image Two Description: </label>
+		<textarea class="image_desc" id="portfolio_meta_box_image3_desc" name="portfolio_meta_box_image3_desc"><?php echo $text_image3_desc; ?></textarea>
+	</p>
+	<p>
+		<label for="portfolio_meta_box_image4">Image Four: </label>
+		<input type="text" name="portfolio_meta_box_image4" id="portfolio_meta_box_image4" value="<?php echo $text_image4; ?>" /><br />
+		<label for="portfolio_meta_box_image4_desc">Image Two Description: </label>
+		<textarea class="image_desc" id="portfolio_meta_box_image4_desc" name="portfolio_meta_box_image4_desc"><?php echo $text_image4_desc; ?></textarea>
 	</p>
 <?php
 }
@@ -113,8 +138,26 @@ function portfolio_meta_box_save($post_id)
 	if (isset($_POST['portfolio_meta_box_image1']))
 		update_post_meta($post_id, 'portfolio_meta_box_image1', esc_attr($_POST['portfolio_meta_box_image1']));
 		
+	if (isset($_POST['portfolio_meta_box_image1_desc']))
+		update_post_meta($post_id, 'portfolio_meta_box_image1_desc', esc_attr($_POST['portfolio_meta_box_image1_desc']));
+		
 	if (isset($_POST['portfolio_meta_box_image2']))
 		update_post_meta($post_id, 'portfolio_meta_box_image2', esc_attr($_POST['portfolio_meta_box_image2']));
+
+	if (isset($_POST['portfolio_meta_box_image2_desc']))
+		update_post_meta($post_id, 'portfolio_meta_box_image2_desc', esc_attr($_POST['portfolio_meta_box_image2_desc']));
+
+	if (isset($_POST['portfolio_meta_box_image3']))
+		update_post_meta($post_id, 'portfolio_meta_box_image3', esc_attr($_POST['portfolio_meta_box_image3']));
+
+	if (isset($_POST['portfolio_meta_box_image3_desc']))
+		update_post_meta($post_id, 'portfolio_meta_box_image3_desc', esc_attr($_POST['portfolio_meta_box_image3_desc']));
+
+	if (isset($_POST['portfolio_meta_box_image4']))
+		update_post_meta($post_id, 'portfolio_meta_box_image4', esc_attr($_POST['portfolio_meta_box_image4']));
+		
+	if (isset($_POST['portfolio_meta_box_image4_desc']))
+		update_post_meta($post_id, 'portfolio_meta_box_image4_desc', esc_attr($_POST['portfolio_meta_box_image4_desc']));
 }
 
 ?>

@@ -46,9 +46,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* Personal Fixes */
-.clear
-{
-   clear: both;
-}

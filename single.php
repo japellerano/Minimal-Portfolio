@@ -14,6 +14,7 @@
       	<p>Posted in: <?php the_category(', '); ?>.</p>
       	<p>Tagged: <?php the_tags(); ?>.</p>
       </div>
+      <div class="clear"></div>
    </div>
 
 <?php get_footer(); ?>

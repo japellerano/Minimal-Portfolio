@@ -7,6 +7,7 @@
 			<?php the_content(); ?>
 		<?php endwhile; endif; ?>
 	</div>
+	<div class="clear"></div>
 </div>
 
 <?php get_footer(); ?>
