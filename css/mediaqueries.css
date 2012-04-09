@@ -187,7 +187,7 @@
 	.page-wrapper
 	{
 		line-height: 2;
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 	}
 
 	/* ------------------------------------------------------ */
@@ -325,5 +325,26 @@
 	.right-column p
 	{
 		line-height: 1.7;
+	}
+
+	/* ------------------------------------------------------ */
+	/* About Page                                             */
+	/* ------------------------------------------------------ */
+	.left-text
+	{
+		float: left;
+		width: 700px;
+		margin-right: 45px;
+	}
+	
+	.right-text
+	{
+		float: left;
+		width: 300px;
+	}
+	
+	h3.skill-title
+	{
+		font-size: 110%;
 	}
 }
