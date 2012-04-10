@@ -8,6 +8,10 @@
       
       <meta charset="<?php bloginfo('charset'); ?>" />
       
+      <?php /* Keywords & Description */ ?>
+      <meta name="keywords" content="<?php echo get_option('seo_keywords'); ?>" />
+      <meta name="description" content="<?php echo get_option('seo_description'); ?>" />
+      
       <?php /* Responsive Design */ ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
