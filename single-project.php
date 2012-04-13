@@ -5,26 +5,40 @@
 			
 			<div class="left-column">
 				<div id="coin-slider">
-					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image1', true); ?>" />
+				
+					<!-- First Image -->
+					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image1', true); ?>" alt="<?php the_title(); ?> Portfolio Image 1" />
 						<span class="description">
 							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image1_desc', true); ?>
 						</span>
 					</a>
-					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image2', true); ?>" />
+										
+					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image2', true); ?>" alt="<?php the_title(); ?> Portfolio Image 2" />
 						<span class="description">
 							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image2_desc', true); ?>
 						</span>
 					</a>
-					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image3', true); ?>" />
+					<a href="#"><img src="<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image3', true); ?>" alt="<?php the_title(); ?> Portfolio Image 3" />
 						<span class="description">
 							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image3_desc', true); ?>
 						</span>
 					</a>
-					<a href="#"><img src="<?php echo get_post_meta( 'portfolio_meta_box_image4', true); ?>" />
-						<span class="description">
-							<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image4_desc', true); ?>
-						</span>
-					</a>
+
+					<!-- Fourth Image -->
+					<?php
+						$url4 = get_post_meta('portfolio_meta_box_image4', true);
+						if ($url4 == "") 
+						{ 
+							echo ""; 
+						} 
+						else 
+						{ ?>
+							<a href="#"><img src="<?php echo get_post_meta( 'portfolio_meta_box_image4', true); ?>" alt="<?php the_title(); ?> Portfolio Image 4" />
+								<span class="description">
+									<?php echo get_post_meta($post->ID, 'portfolio_meta_box_image4_desc', true); ?>
+								</span>
+							</a>
+					<?php	} ?>
 				</div>
 			</div>
 			

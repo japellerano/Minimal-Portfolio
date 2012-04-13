@@ -249,9 +249,11 @@
 		line-height: 1.4;
 	}
 	
-	#single-post
+	.side-post
 	{
 		line-height: 2;
+		width: 18%;
+		float: left;
 	}
 	
 	li.widget
@@ -268,6 +270,8 @@
 	{
 		margin-bottom: 8px;
 	}
+	
+	
 	
 	/* ------------------------------------------------------ */
 	/* Single Portfolio Page                                  */

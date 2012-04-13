@@ -1,5 +1,9 @@
 <!doctype html>
 <html>
+	<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+	<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+	<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+	<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
    <head>
    
       <title>
@@ -18,9 +22,18 @@
       <?php /* Stylesheets */ ?>
       <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
       
+      <?php /* Internet Explorer Stylesheets */ ?>
+      <!--[if IE 7]>
+      	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie7.css" />
+      <![endif]-->
+      <!--[if IE 8]>
+      	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie8.css" />
+      <![endif]-->
+      
       <?php /* Javascript */ ?>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
       <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/coin-slider.min.js"></script>
+      <script src="<?php bloginfo('template_directory'); ?>/scripts/modernizr-2.5.3.min.js"></script>
 	   
 	   <?php /* Coin Slider */ ?>
 		<script type="text/javascript">
