@@ -29,6 +29,9 @@
       <!--[if IE 8]>
       	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie8.css" />
       <![endif]-->
+      <!--[if IE 9]>
+      	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie9.css" />
+      <![endif]-->
       
       <?php /* Javascript */ ?>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

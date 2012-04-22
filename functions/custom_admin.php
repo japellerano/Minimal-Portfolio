@@ -17,6 +17,8 @@ function register_mysettings() {
    register_setting('theme-settings-group', 'first_class');
    register_setting('theme-settings-group', 'second_class');
    register_setting('theme-settings-group', 'third_class');
+   register_setting('theme-settings-group', 'github_logo');
+   register_setting('theme-settings-group', 'github_link');
 }
 
 function theme_settings_page() {
@@ -73,6 +75,18 @@ function theme_settings_page() {
             	<th scope="row">LaterStars URL</th>
             	<td>
             		<input name="laterstars_url" type="text" value="<?php echo get_option('laterstars_url'); ?>" />
+            	</td>
+            </tr>
+            <tr>
+            	<th scope="row">Git Hub Logo Link</th>
+            	<td>
+            		<input name="github_logo" type="text" value="<?php echo get_option('github_logo'); ?>" />
+            	</td>
+            </tr>
+            <tr>
+            	<th scope="row">Git Hub User Link</th>
+            	<td>
+            		<input name="github_link" type="text" value="<?php echo get_option('github_link'); ?>" />
             	</td>
             </tr>
             <th scope="row">Artist Statement</th>
