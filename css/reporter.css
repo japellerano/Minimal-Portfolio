@@ -33,9 +33,9 @@ body:after {
         background-color: hsla(360,60%,40%,0.7);
     }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
 	body:after {
-		content: "1280 and up";
+		content: "1200 and up";
 		background-color: hsla(90,60%,40%,0.7);
 	}
 }
