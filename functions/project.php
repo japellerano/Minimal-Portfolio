@@ -13,7 +13,7 @@ function register_project_post() {
       'new_item'           => __('New Project'),
       'view_item'          => __('View Project'),
       'search_items'       => __('Search Projects'),
-      'not_found'          => __('Np projects found'),
+      'not_found'          => __('No projects found'),
       'not_found_in_trash' => __('No projects found in Trash'),
       'parent_item_colon'  => '',
       'menu_name'          => 'Portfolio'

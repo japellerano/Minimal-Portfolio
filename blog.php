@@ -9,7 +9,8 @@
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 			<article class="blog-post">
 				<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="meta">By: <?php the_author(); ?>. On: <?php the_time('jS F, Y'); ?>. Under: <?php the_category(', '); ?>. The Tags: <?php the_tags(); ?>.</p>
+				<p class="meta">By: <?php the_author(); ?>. On: <?php the_time('jS F, Y'); ?>. <br />
+				Under: <?php the_category(', '); ?>. <?php the_tags(); ?>.</p>
 				<?php the_excerpt(); ?>
 			</article>
 		<?php endwhile; endif; ?>
