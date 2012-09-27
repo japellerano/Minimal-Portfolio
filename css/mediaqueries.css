@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
 /* ------------------------------------------------------ */
 /* Screen size for mobile devices                         */
 /* ------------------------------------------------------ */
-@media only screen and (max-width: 400px) 
-=======
-/* Standard Smartphones ------------------------------------ */
-@media only screen and (min-width: 320px)
->>>>>>> 6ca0425fde42f66eaf91916924e371a6eb1bcf4b
+@media only screen and (min-width: 320px) 
 {
 	/* ------------------------------------------------------ */
 	/* Site Wide CSS                                          */
@@ -255,209 +250,231 @@
 		display: none;
 	}
 	
-<<<<<<< HEAD
 }
 
 /* ------------------------------------------------------ */
-/* Screen size larger than 1200px                         */
+/* Phone
 /* ------------------------------------------------------ */
-@media screen and (min-width: 1200px)
-=======
-	footer p a:hover
-	{
-		text-decoration: underline;
-		color: rgba(255, 102, 68, 1.0);
-	}
-
-}
-
 @media only screen and (min-width: 480px) {
-	#wrapper
+    /* ------------------------------------------------------ */
+	/* Site Wide CSS                                          */
+	/* ------------------------------------------------------ */
+	.accent
 	{
+		height: 8px;
+		background-color: rgba(255, 51, 51, 1.0);
 		width: 100%;
+		margin 0 auto;
 	}
 	
-	.accent-border
-	{
-		width: 100%;
-		height: 6px;
-		background-color: rgba(255, 136, 68, 1.0);
-	}
-	
-	h2.heading
-	{
-		display: none;
-	}
-	
-	/* Header ----------------------------------------------- */
-	header
+	.content
 	{
 		width: 100%;
 		margin: auto;
-		text-align: center;
-		border-top: solid 1px rgba(1, 1, 1, 0.3);
-		border-bottom: solid 1px rgba(1, 1, 1, 0.3);
-		background-color: rgba(0, 0, 0, 0.2);
+		margin-top: 10px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Header                                                 */
+	/* ------------------------------------------------------ */
+	header
+	{
+		width: 98%;
+		margin: auto;
+		margin-top: 5px;
+	}
+	
+	#identity
+	{
+		width: 100%;
+		float: left;
+		margin-bottom: 10px;
 	}
 	
 	h1#site-title
 	{
-		margin-bottom: 5px;
-		margin-top: 5px;
+		float: left;
+		letter-spacing: 3px;
+		font-size: 200%;
 	}
 	
 	h1#site-title a
 	{
-		color: rgba(1, 1, 1, 1.0);
 	}
 	
 	h3#job-description
 	{
-		padding-bottom: 8px;
+		float: left;
+		letter-spacing: 1px;
+		word-spacing: 1px;
+		font-size: 150%;
 	}
 	
-	/* Navigation ------------------------------------------- */
+	/* ------------------------------------------------------ */
+	/* Navigation Styles                                      */
+	/* ------------------------------------------------------ */
 	nav
 	{
-		padding-bottom: 8px;
+		float: left;
+		margin: auto;
+		border-bottom: 1px solid rgba(0, 0, 0, 1.0);
+		padding-bottom: 6px;
+		width: 100%;
 	}
 	
-	ul.menu
+	nav ul.menu
 	{
 	}
 	
-	ul.menu li
+	nav ul.menu li
 	{
 		display: inline;
-		border-right: solid 1px rgba(1, 1, 1, 0.45);
-		padding-right: 5px;
-		padding-left: 5px;
+		float: left;
+		padding-right: 8px;
+		font-size: 110%;
 	}
 	
-	ul.menu li:first-child
+	nav ul.menu li:last-child
 	{
-		padding-left: 0px;
+		padding-right: 0;
+	}
+
+	nav ul.menu li a
+	{
+	}	
+
+	nav ul.menu li.current-menu-item a
+	{
+		color: rgba(255, 51, 51, 1.0);
 	}
 	
-	ul.menu li:last-child
+	/* ------------------------------------------------------ */
+	/* Footer Styles                                          */
+	/* ------------------------------------------------------ */
+	footer
 	{
-		border: 0;
-		padding-right: 0px;
-	}
-	
-	ul.menu li.current-menu-item a,
-	ul.menu li.current-menu-item a:hover,
-	ul.menu li.current-menu-item a:visited
-	{
-		color: #222;
-		text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.7);
-	}
-	
-	ul.menu li:hover
-	{
-	}
-	
-	ul.menu li a
-	{
-		font-family: Helvetica, Verdana, sans-serif;
-		font-size: 90%;
-		color: rgba(255, 102, 68, 1.0);
-	}
-	
-	ul.menu li a:hover
-	{
-		color: rgba(255, 136, 68, 1.0);
-	}
-	
-	/* Content ---------------------------------------------- */
-	#content
-	{
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
 		width: 98%;
 		margin: auto;
-		padding-top: 10px;
+		padding-top: 5px;
+		line-height: 1.7;
 		padding-bottom: 10px;
 	}
 	
-	#content p
+	footer p
 	{
-		text-indent: 10px;
-		padding-left: 5px;
-		line-height: 1.25;
+	}
+
+	/* ------------------------------------------------------ */
+	/* Home Page Styles                                       */
+	/* ------------------------------------------------------ */	
+	#about
+	{
+		width: 97%;
+		float: left;
+		padding-left: 3px;
+		margin-bottom: 8px;
 	}
 	
-	/* Portfolio Content ------------------------------------ */
-	#featured
+	#about p
 	{
-		width: 95%;
-		margin: auto;
+		line-height: 2;
+		font-size: 100%;
 	}
 	
-	#portfolio
-	{
-		width: 95%;
-		margin: auto;
+	article.featured
+	{	
+		display: none;
 	}
-	
+
+	/* ------------------------------------------------------ */
+	/* Portfolio Page                                         */
+	/* ------------------------------------------------------ */
 	article.project
 	{
-		width: 100%;
-		box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7);
-		margin-top: 10px;
-		margin-bottom: 10px;
-		text-align: center;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		width: 97%;
+		line-height: 1.5;
+		padding-bottom: 30px;
+		float: left;
+		padding-left: 5px;
 	}
 	
 	article.project img
 	{
-		width: 65%;
-		height: auto;
+		max-width: 100%;
 	}
 	
-	h3.project-title
+	article.project h5.project-category a
 	{
-		color: rgba(0, 136, 204, 1.0);
-		font-size: 130%
+		color: rgba(255, 51, 51, 1.0);
 	}
-	
-	h3.project-title:hover
+
+	/* ------------------------------------------------------ */
+	/* Page Template                                          */
+	/* ------------------------------------------------------ */
+	.page-wrapper
 	{
-		color: rgba(255, 102, 68, 1.0);
+		line-height: 2;
+		margin-bottom: 30px;
+		width: 97%;
+		padding-left: 3px;
 	}
-	
-	h5.project-category
-	{
-		display: none;
-	}
-	
-	/* Blog ------------------------------------------------- */
+
+	/* ------------------------------------------------------ */
+	/* Blog Page Template                                     */
+	/* ------------------------------------------------------ */
 	#posts
 	{
-		width: 96%;
-		margin: auto;
+		width: 97%;
+		float: left;
+		line-height: 1.3;
+		margin-bottom: 30px;
+		padding-left: 3px;
+	}
+	
+	article.blog-post
+	{
+		margin-bottom: 10px;
+	}
+	
+	.single-post
+	{
+		line-height: 1.3;
+		width: 97%;
+		float: left;
+		margin-bottom: 30px;
+		padding-left: 3px;
+	}
+	
+	.single-post p
+	{
+		line-height: 1.8;
+		font-size: 14px;
+	}
+	
+	.single-post a
+	{
+		color: rgba(255, 51, 51, 1.0);
 	}
 	
 	h2.post-title
 	{
-		font-size: 115%;
-		padding-bottom: 5px;
-	}
-	
-	h2.post-title a
-	{
-		color: rgba(0, 136, 204, 1.0);
+		margin-bottom: 2px;
 	}
 	
 	h2.post-title a:hover
 	{
-		color: rgba(255, 102, 68, 1.0);
-		text-decoration: none;
+		color: rgba(255, 51, 51, 1.0);
 	}
 	
-	article.blog-post p
+	p.meta
 	{
-		font-size: 90%;
+		margin-bottom: 8px;
+	}
+	
+	p.meta a
+	{
+		color: rgba(255, 51, 51, 1.0);
 	}
 	
 	#sidebar
@@ -465,39 +482,798 @@
 		display: none;
 	}
 	
-	/* Footer ----------------------------------------------- */
-	footer
+	.side-post
+	{
+		width: 97%;
+		padding-left: 3px;
+		line-height: 1.1;
+	}
+	
+	.social
+	{
+		float: left;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		width: 97%;
+	}
+	
+	.iframe
+	{	
+		display: none;
+	}
+}
+
+/* ------------------------------------------------------ */
+/* Tablet
+/* ------------------------------------------------------ */
+@media only screen and (min-width: 768px) {
+    /* ------------------------------------------------------ */
+	/* Site Wide CSS                                          */
+	/* ------------------------------------------------------ */
+	.accent
+	{
+		height: 8px;
+		background-color: rgba(255, 51, 51, 1.0);
+		width: 100%;
+		margin 0 auto;
+	}
+	
+	.content
 	{
 		width: 100%;
-		padding-top: 10px;
-		padding-bottom: 20px;
 		margin: auto;
-		text-align: center;
-		border-top: solid 1px rgba(1, 1, 1, 0.3);
+		margin-top: 10px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Header                                                 */
+	/* ------------------------------------------------------ */
+	header
+	{
+		width: 99%;
+		margin: auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+	#identity
+	{
+		padding-left: 10px;
+		float: left;
+	}
+	
+	h1#site-title
+	{
+		float: left;
+		letter-spacing: 3px;
+		margin-right: 20px;
+	}
+	
+	h1#site-title a
+	{
+		
+	}
+	
+	h3#job-description
+	{
+		float: left;
+		margin-top: 10px;
+		letter-spacing: 1px;
+		word-spacing: 1px;
+	}
+	
+	/* Navigation ------------------------------------------- */
+	nav
+	{
+		float: right;
+		padding-right: 10px;
+	}
+	
+	nav ul.menu
+	{
+		float: right;
+		margin-top: 13px;
+	}
+	
+	nav ul.menu li
+	{
+		display: inline;
+		float: left;
+		padding-right: 10px;
+		font-size: 125%;
+	}
+	
+	nav ul.menu li:last-child
+	{
+		padding-right: 0;
+	}
+
+	nav ul.menu li a
+	{
+	}	
+
+	nav ul.menu li.current-menu-item a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	nav ul.menu li.current-menu-item a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	nav ul.menu li a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Footer Styles                                          */
+	/* ------------------------------------------------------ */
+	footer
+	{
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
+		width: 100%;
+		margin: auto;
+		padding-top: 10px;
+		line-height: 1.7;
 	}
 	
 	footer p
 	{
-		font-size: 80%;
 	}
 	
-	footer p a
+	/* ------------------------------------------------------ */
+	/* Home Page Styles                                       */
+	/* ------------------------------------------------------ */	
+	#about
 	{
-		color: rgba(0, 136, 204, 1.0);
+		width: 500px;
+		float: left;
+		margin-right: 20px;
 	}
 	
-	footer p a:hover
+	#about p
 	{
-		text-decoration: underline;
-		color: rgba(255, 102, 68, 1.0);
+		line-height: 2;
+		font-size: 120%;
+	}
+	
+	article.featured
+	{
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		padding-right: 10px;
+		line-height: 1.5;
+		padding-bottom: 10px;
+		width: 500px;
+		float: left;
+		margin-left: 20px;
+	}
+	
+	article.featured img
+	{
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	
+	h5.project-category a
+	{
+		color: rgba(255, 51, 51, 1.0);
+		font-family: Helvetica, Arial, sans-serif;
+	}
+
+	/* ------------------------------------------------------ */
+	/* Portfolio Page                                         */
+	/* ------------------------------------------------------ */
+	article.project
+	{
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		width: 510px;
+		height: 230px;
+		padding-right: 10px;
+		line-height: 1.5;
+		padding-bottom: 10px;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 40px;
+	}
+	
+	article.project img
+	{
+		float: left;
+		margin-right: 10px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Page Template                                          */
+	/* ------------------------------------------------------ */
+	.page-wrapper
+	{
+		line-height: 2;
+		margin-bottom: 30px;
+	}
+
+	/* ------------------------------------------------------ */
+	/* Blog Page Template                                     */
+	/* ------------------------------------------------------ */
+	#posts
+	{
+		width: 76%;
+		float: left;
+		margin-right: 15px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+	}
+	
+	article.blog-post
+	{
+		margin-bottom: 10px;
+	}
+	
+	.single-post
+	{
+		line-height: 1.3;
+		width: 76%;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+	
+	.single-post p
+	{
+		line-height: 1.8;
+		font-size: 14px;
+	}
+	
+	.single-post a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	h2.post-title
+	{
+		margin-bottom: 2px;
+	}
+	
+	h2.post-title a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	p.meta
+	{
+		margin-bottom: 8px;
+	}
+	
+	p.meta a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	#sidebar
+	{
+		width: 22%;
+		float: left;
+		line-height: 1.4;
+	}
+	
+	.side-post
+	{
+		line-height: 2;
+		width: 18%;
+		float: left;
+	}
+	
+	li.widget
+	{
+		margin-bottom: 10px;
+	}
+	
+	li.widget a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	li.twitter-post
+	{
+		margin-bottom: 8px;
+	}
+	
+	
+	
+	/* ------------------------------------------------------ */
+	/* Single Portfolio Page                                  */
+	/* ------------------------------------------------------ */
+	.single-project
+	{
+		margin-bottom: 30px;
+	}
+	
+	.coin-slider
+	{
+		float: left;
+	}
+	
+	.left-column
+	{
+		float: left;
+		width: 570px;
+		margin-right: 10px;
+	}
+	
+	.right-column
+	{
+		float: left;
+		width: 470px;
+	}
+	
+	.right-column h2.project-title
+	{
+		margin-bottom: 10px;
+	}
+	
+	.information
+	{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 5px;
+		background-color: rgba(136, 136, 136, 0.3);
+		border: 1px solid rgba(136, 136, 136, 0.7);
+		border-radius: 4px;
+	}
+	
+	.information a
+	{
+		color: rgba(255, 51, 51, 1.0);
+		font-weight: bold;
+	}
+	
+	p.website-link
+	{
+		float: left;
+		padding-right: 8px;
+		width: 96%;
+	}
+	
+	.right-column p
+	{
+		line-height: 1.7;
+	}
+
+	/* ------------------------------------------------------ */
+	/* About Page                                             */
+	/* ------------------------------------------------------ */
+	.left-text
+	{
+		float: left;
+		width: 700px;
+		margin-right: 45px;
+	}
+	
+	.right-text
+	{
+		float: right;
+		width: 300px;
+	}
+	
+	h3.skill-title
+	{
+		font-size: 110%;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Contact Page                                           */
+	/* ------------------------------------------------------ */
+	.contact-form
+	{
+		width: 700px;
+		float: left;
+		margin-right: 60px;
+	}
+	
+	.social-media
+	{
+		width: 200px;
+		float: left;
+	}
+	
+	.social-item
+	{
+		margin-bottom: 15px;
+	}
+}
+
+/* ------------------------------------------------------ */
+/* Large Tablet & Smaller Laptops
+/* ------------------------------------------------------ */
+@media only screen and (min-width: 1024px) {   
+    /* ------------------------------------------------------ */
+	/* Site Wide CSS                                          */
+	/* ------------------------------------------------------ */
+	.accent
+	{
+		height: 8px;
+		background-color: rgba(255, 51, 51, 1.0);
+		margin: 0 auto;
+		width: 1100px;
+	}
+	
+	.content
+	{
+		width: 1080px;
+		margin: auto;
+		margin-top: 35px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Header                                                 */
+	/* ------------------------------------------------------ */
+	header
+	{
+		width: 1100px;
+		margin: auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+	#identity
+	{
+		padding-left: 10px;
+		float: left;
+	}
+	
+	h1#site-title
+	{
+		float: left;
+		letter-spacing: 3px;
+		margin-right: 20px;
+	}
+	
+	h1#site-title a
+	{
+		
+	}
+	
+	h3#job-description
+	{
+		float: left;
+		margin-top: 10px;
+		letter-spacing: 1px;
+		word-spacing: 1px;
+	}
+	
+	/* Navigation ------------------------------------------- */
+	nav
+	{
+		float: right;
+		padding-right: 10px;
+	}
+	
+	nav ul.menu
+	{
+		float: right;
+		margin-top: 13px;
+	}
+	
+	nav ul.menu li
+	{
+		display: inline;
+		float: left;
+		padding-right: 10px;
+		font-size: 125%;
+	}
+	
+	nav ul.menu li:last-child
+	{
+		padding-right: 0;
+	}
+
+	nav ul.menu li a
+	{
+	}	
+
+	nav ul.menu li.current-menu-item a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	nav ul.menu li.current-menu-item a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	nav ul.menu li a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Footer Styles                                          */
+	/* ------------------------------------------------------ */
+	footer
+	{
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
+		width: 1100px;
+		margin: auto;
+		padding-top: 10px;
+		line-height: 1.7;
+	}
+	
+	footer p
+	{
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Home Page Styles                                       */
+	/* ------------------------------------------------------ */	
+	#about
+	{
+		width: 500px;
+		float: left;
+		margin-right: 20px;
+	}
+	
+	#about p
+	{
+		line-height: 2;
+		font-size: 120%;
+	}
+	
+	article.featured
+	{
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		padding-right: 10px;
+		line-height: 1.5;
+		padding-bottom: 10px;
+		width: 500px;
+		float: left;
+		margin-left: 20px;
+	}
+	
+	article.featured img
+	{
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	
+	h5.project-category a
+	{
+		color: rgba(255, 51, 51, 1.0);
+		font-family: Helvetica, Arial, sans-serif;
+	}
+
+	/* ------------------------------------------------------ */
+	/* Portfolio Page                                         */
+	/* ------------------------------------------------------ */
+	article.project
+	{
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		width: 510px;
+		height: 230px;
+		padding-right: 10px;
+		line-height: 1.5;
+		padding-bottom: 10px;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 40px;
+	}
+	
+	article.project img
+	{
+		float: left;
+		margin-right: 10px;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Page Template                                          */
+	/* ------------------------------------------------------ */
+	.page-wrapper
+	{
+		line-height: 2;
+		margin-bottom: 30px;
+	}
+
+	/* ------------------------------------------------------ */
+	/* Blog Page Template                                     */
+	/* ------------------------------------------------------ */
+	#posts
+	{
+		width: 76%;
+		float: left;
+		margin-right: 15px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+	}
+	
+	article.blog-post
+	{
+		margin-bottom: 10px;
+	}
+	
+	.single-post
+	{
+		line-height: 1.3;
+		width: 76%;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+	
+	.single-post p
+	{
+		line-height: 1.8;
+		font-size: 14px;
+	}
+	
+	.single-post a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	h2.post-title
+	{
+		margin-bottom: 2px;
+	}
+	
+	h2.post-title a:hover
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	p.meta
+	{
+		margin-bottom: 8px;
+	}
+	
+	p.meta a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	#sidebar
+	{
+		width: 22%;
+		float: left;
+		line-height: 1.4;
+	}
+	
+	.side-post
+	{
+		line-height: 2;
+		width: 18%;
+		float: left;
+	}
+	
+	li.widget
+	{
+		margin-bottom: 10px;
+	}
+	
+	li.widget a
+	{
+		color: rgba(255, 51, 51, 1.0);
+	}
+	
+	li.twitter-post
+	{
+		margin-bottom: 8px;
+	}
+	
+	
+	
+	/* ------------------------------------------------------ */
+	/* Single Portfolio Page                                  */
+	/* ------------------------------------------------------ */
+	.single-project
+	{
+		margin-bottom: 30px;
+	}
+	
+	.coin-slider
+	{
+		float: left;
+	}
+	
+	.left-column
+	{
+		float: left;
+		width: 570px;
+		margin-right: 10px;
+	}
+	
+	.right-column
+	{
+		float: left;
+		width: 470px;
+	}
+	
+	.right-column h2.project-title
+	{
+		margin-bottom: 10px;
+	}
+	
+	.information
+	{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 5px;
+		background-color: rgba(136, 136, 136, 0.3);
+		border: 1px solid rgba(136, 136, 136, 0.7);
+		border-radius: 4px;
+	}
+	
+	.information a
+	{
+		color: rgba(255, 51, 51, 1.0);
+		font-weight: bold;
+	}
+	
+	p.website-link
+	{
+		float: left;
+		padding-right: 8px;
+		width: 96%;
+	}
+	
+	.right-column p
+	{
+		line-height: 1.7;
+	}
+
+	/* ------------------------------------------------------ */
+	/* About Page                                             */
+	/* ------------------------------------------------------ */
+	.left-text
+	{
+		float: left;
+		width: 700px;
+		margin-right: 45px;
+	}
+	
+	.right-text
+	{
+		float: right;
+		width: 300px;
+	}
+	
+	h3.skill-title
+	{
+		font-size: 110%;
+	}
+	
+	/* ------------------------------------------------------ */
+	/* Contact Page                                           */
+	/* ------------------------------------------------------ */
+	.contact-form
+	{
+		width: 700px;
+		float: left;
+		margin-right: 60px;
+	}
+	
+	.social-media
+	{
+		width: 200px;
+		float: left;
+	}
+	
+	.social-item
+	{
+		margin-bottom: 15px;
 	}
 }
 
 
-
-/* Ipad & tablets ------------------------------------------ */
-@media only screen and (min-width: 768px)
->>>>>>> 6ca0425fde42f66eaf91916924e371a6eb1bcf4b
+/* ------------------------------------------------------ */
+/* Screen size larger than 1200px                         */
+/* ------------------------------------------------------ */
+@media only screen and (min-width: 1100px)
 {
 	/* ------------------------------------------------------ */
 	/* Site Wide CSS                                          */
@@ -617,191 +1393,10 @@
 	{
 	}
 	
-<<<<<<< HEAD
 	/* ------------------------------------------------------ */
 	/* Home Page Styles                                       */
 	/* ------------------------------------------------------ */	
 	#about
-=======
-	/* Footer ----------------------------------------------- */
-	footer
-	{
-		padding-bottom: 10px;
-		padding-top: 10px;
-		width: 95%;
-		margin: auto;
-	}
-}
-
-@media only screen
-and (min-width: 1024px)
-{
-	body
-	{
-		font-size: 12px;
-	}
-	
-	#wrapper
-	{
-		width: 95%;
-		margin: auto;
-		background-color: rgba(255, 255, 255, 1.0);
-		position: relative;
-		box-shadow: 3px 3px 5px rgba(1, 1, 1, 0.35);
-		margin-bottom: 15px;
-		border-left: 1px solid rgba(1, 1, 1, 0.2);
-	}
-	
-	.accent-border
-	{
-		height: 10px;
-		background-color: rgba(255, 136, 68, 1.0);
-		z-index: 10;
-		box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.4);
-		position: relative;
-	}
-
-	h2.heading
-	{
-		display: none;
-	}
-	
-	/* Header ----------------------------------------------- */
-	header
-	{
-		width: 100%;
-		margin-top: 10px;
-		height: 35px;
-		border-bottom: 1px dashed rgba(136, 136, 136, 0.8);
-	}
-	
-	h1#site-title
-	{
-		text-indent: 10px;
-		border-right: 1px dashed rgba(1, 1, 1, 1.0);
-		padding-right: 10px;
-		float: left;
-	}
-	
-	h1#site-title a
-	{
-		color: rgba(1, 1, 1, 1.0);
-	}
-	
-	h3#job-description
-	{
-		padding-left: 10px;
-		float: left;
-		padding-top: 8px;
-		font-family: Georgia, serif;
-	}
-	
-	/* Navigation ------------------------------------------- */
-	nav
-	{
-		float: right;
-		padding-right: 8px;
-		z-index: 1;
-		position: relative;
-		margin-top: -10px;
-	}
-	
-	ul.menu
-	{
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.menu li
-	{
-		display: inline;
-		margin-right: 8px;
-		height: 28px;
-		width: 56px;
-		float: left;
-		background-color: rgba(255, 136, 68, 1.0);
-		font-size: 100%;
-		line-height: 2;
-		padding-left: 2px;
-		padding-right: 2px;
-		overflow: hidden;
-		text-align: center;
-	}
-	
-	ul.menu li:last-child
-	{
-		padding-right: 0;
-	}
-	
-	ul.menu li a
-	{
-		color: rgba(255, 255, 255, 1.0);
-	}
-	
-	/* Content ---------------------------------------------- */
-	#content
-	{
-		width: 98%;
-		margin: auto;
-		padding-top: 25px;
-	}
-	
-	/* Portfolio -------------------------------------------- */
-	#featured
-	{
-		width: 100%;
-		height: 360px;
-		overflow: hidden;
-		margin: auto;
-		text-align: center;
-	}
-	
-	#portfolio
-	{
-		width: 100%;
-		margin: auto;
-	}
-		
-	article.project
-	{
-		width: 275px;
-		float: left;
-		padding-left: 10px;
-		padding-right: 10px;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		height: 300px;
-		margin-right: 15px;
-		margin-bottom: 20px;
-		border-radius: 3px;
-		box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7);
-		border-bottom-right-radius: 20px;
-	}
-	
-	article.project img
-	{
-		margin: 8px;
-		box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.7);
-		width: 95%;
-		height: auto;
-	}
-	
-	/* Footer ----------------------------------------------- */
-	footer
-	{
-		padding-bottom: 10px;
-		padding-top: 10px;
-		width: 95%;
-		margin: auto;
-	}
-}
-
-/* Large Screen Desktops and Laptops ----------------------- */
-@media only screen
-and (min-width: 1280px)
-{
-	#wrapper
->>>>>>> 6ca0425fde42f66eaf91916924e371a6eb1bcf4b
 	{
 		width: 500px;
 		float: left;
