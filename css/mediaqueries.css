@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 
-/* ------------------------------------------------------ */
-/* Screen size for mobile devices                         */
-/* ------------------------------------------------------ */
-@media only screen and (max-width: 400px) 
-=======
 /* Standard Smartphones ------------------------------------ */
 @media only screen and (min-width: 320px)
->>>>>>> 6ca0425fde42f66eaf91916924e371a6eb1bcf4b
 {
+	#wrapper {
+		width: 100%;
+	}
 	/* ------------------------------------------------------ */
 	/* Site Wide CSS                                          */
 	/* ------------------------------------------------------ */
@@ -254,21 +250,6 @@
 	{	
 		display: none;
 	}
-	
-<<<<<<< HEAD
-}
-
-/* ------------------------------------------------------ */
-/* Screen size larger than 1200px                         */
-/* ------------------------------------------------------ */
-@media screen and (min-width: 1200px)
-=======
-	footer p a:hover
-	{
-		text-decoration: underline;
-		color: rgba(255, 102, 68, 1.0);
-	}
-
 }
 
 @media only screen and (min-width: 480px) {
