@@ -66,14 +66,4 @@
 		
 	</head>
    <body>
-   	<div class="accent"></div>
-   	<header>
-			<div id="identity">
-				<h1 id="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-				<h3 id="job-description"><?php bloginfo('description'); ?></h3>
-			</div>
-			<nav>
-				<?php wp_nav_menu(array('theme_location' => 'menu-1', 'container' => false)); ?>
-			</nav>
-		</header>
-		<div class="clear"></div>
+

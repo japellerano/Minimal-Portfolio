@@ -7,9 +7,9 @@
 */
 
 @import url('css/reset.css');
-@import url('css/master.css');
-@import url('css/mediaqueries.css');
-@import url('css/coin-slider-styles.css');
+/* @import url('css/master.css'); */
+/* @import url('css/mediaqueries.css'); */
+/* @import url('css/coin-slider-styles.css'); */
 /* @import url('css/reporter.css'); */
 
 /* Personal Fixes */
@@ -18,3 +18,93 @@
    clear: both;
 }
 
+body {
+	font-size: 12px;
+}
+
+@media only screen and (min-width: 320px) {
+	.splash {
+		width: 96%;
+		margin: 0 auto;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 180%;
+		padding-bottom: 5px;
+	}
+
+	h2 {
+		font-size: 150%;
+		width: 90%;
+		margin: 0 auto;
+		letter-spacing: 2px;
+		text-align: left;
+	}
+	
+}
+
+@media only screen and (min-width: 480px) {
+	.splash {
+		width: 96%;
+		margin: 0 auto;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 180%;
+	}
+
+	h2 {
+		font-size: 150%;
+		width: 90%;
+		margin: 0 auto;
+		letter-spacing: 2px;
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 786px) {
+	.splash {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	h1 {
+		font-size: 230%;
+	}
+
+	h2 {
+		font-size: 200%;
+		width: 75%;
+		margin: 0 auto;
+		letter-spacing: 2px;
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.splash {
+		width: 85%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 30px;
+	}
+
+	h1 {
+		font-size: 300%;
+		padding-bottom: 10px;
+	}
+
+	h2 {
+		font-size: 230%;
+		width: 50%;
+		margin: 0 auto;
+		letter-spacing: 2px;
+		text-align: left;
+	}
+}
